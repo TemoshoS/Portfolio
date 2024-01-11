@@ -10,10 +10,20 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  align-items: center;
+  
 }
 nav{
-  background-color: #000000;
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 1px 1px 4px rgba(255, 255, 255, 1);
+
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
 
 }
 nav ul {
@@ -25,7 +35,7 @@ nav ul {
 }
 
 nav li{
-  height: 50px;
+  height: 60px;
 }
 
 nav a {
@@ -77,6 +87,99 @@ nav li:first-child{
 .menu-button{
   display: none;
 
+}
+
+/* Home page */
+.home{
+ position: relative;
+ justify-content: space-between;
+ display: flex;
+ align-items: center;
+ padding: 70px 10% 0;
+ 
+}
+.home-content{
+  max-width: 600px;
+  flex: 1;
+}
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+}
+.home-content h3:nth-of-type(2){
+  margin-bottom:  30px;
+}
+.home-content h3 span{
+  color: rgb(88, 38, 146);
+}
+
+.home-content h1{
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+}
+
+.home-content p{
+  font-size: 20px;
+
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid rgb(216, 182, 231);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(216, 182, 231);
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+  background-color: rgb(216, 182, 231);
+  color: #081b29;
+  box-shadow: 0 0 20px rgb(216, 182, 231);
+}
+
+.btnMore{
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: rgb(216, 182, 231);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btnMore:hover{
+  box-shadow: 0 0 5px rgb(216, 182, 231),
+  0 0 25px rgb(216, 182, 231),0 0 50px rgb(216, 182, 231)
+  
+}
+.content-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.profile-image {
+  width: 250px; 
+  height: 250px; 
+  border-radius: 50%;
+  margin-left: 20px; 
+  box-shadow: 0 0 20px rgba(187, 115, 218, 0.8), 0 0 40px rgba(197, 83, 83, 0.6), 0 0 60px rgba(33, 245, 5, 0.4);
+}
+.profile-image img {
+  width: 100%;
+  height: 100%; 
+  border-radius: 50%;
+  object-fit: cover; 
+  
 }
 
 @media screen and (max-width: 800px) {

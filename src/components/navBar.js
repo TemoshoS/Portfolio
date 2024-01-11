@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../logo-white.png'
+
 
 function NavBar() {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -28,21 +30,21 @@ function NavBar() {
     <nav>
       <ul className={`sidebar ${sidebarVisible ? 'show' : ''}`}>
         <li onClick={hideSidebar}>
-          <a href=''>
+          <a href='#'>
             <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white" />
             </svg>
           </a>
         </li>
         <li><a href='#'>Skills</a></li>
-        <li><a href='#'>Project</a></li>
-        <li><a href='#'>Experience</a></li>
+        <li><a href='#'>Projects</a></li>
+        <li><a href='#'>Contact</a></li>
       </ul>
       <ul>
-        <li><a href=''>Temosho</a></li>
+        <li><a href='#'><img src={logo} alt="Logo" className='logo'/>Temosho</a></li>
         <li className='hideOnMobile'><a href='#'>Skills</a></li>
-        <li className='hideOnMobile'><a href='#'>Project</a></li>
-        <li className='hideOnMobile'><a href='#'>Experience</a></li>
+        <li className='hideOnMobile'><a href='#'>Projects</a></li>
+        <li className='hideOnMobile'><a href='#'>Contact</a></li>
         <li className='menu-button' onClick={showSidebar} >
           <a href="javascript:void(0);">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
