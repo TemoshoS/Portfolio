@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+*{
+   margin: 0;
+   padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
   min-height: 100vh;
+  background-image: url('../public/smoke.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+  background-color: #000000;
+  box-shadow: 1px 1px 4px rgba(255, 255, 255, 1);
+
+}
+nav ul {
+  width: 100%;
+  list-style: none;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav li{
+  height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: relative; 
+}
+
+
+nav a:hover {
+ 
+  background-color: #464545;
+  transition: width 0.3s ease; 
+}
+
+
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgb(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  box-shadow: -1px 0 1px rgba(255, 255, 255, 1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar.show {
+  display: block;
+}
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+
+}
+
+@media screen and (max-width: 800px) {
+
+   .hideOnMobile{
+    display: none;
+   }
+   .menu-button{
+    display: block;
+  
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+@media screen and (max-width: 500px) {
+
+ .sidebar{
+  width: 100%;
+ }
 }
