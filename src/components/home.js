@@ -44,7 +44,7 @@ function Home() {
                 <a href='https://www.facebook.com/temosho.shaku' style={{ '--1': 3 }}><i className='bx bxl-facebook-square'></i></a>
                 <a href='#' style={{ '--1': 4 }}><i className='bx bxl-twitter'></i></a>
               </div>
-              <a href='#skills' className='btnMore'>More About </a>
+              <a href='#about' className='btnMore'>More About </a>
             </div>
           </div>
           <div className='profile-image'>
@@ -86,7 +86,7 @@ function Home() {
             </div>
 
             <div>
-            <img src={voice} className='project-image' alt='project image'/>
+            <img src={country} className='project-image' alt='project image'/>
               <h2>Voice Journal App</h2>
               <p>A digital journal app for voice recording. The app allow users to create, listen to, and
                 delete voice notes.</p>
@@ -94,7 +94,7 @@ function Home() {
             </div>
 
             <div>
-            <img src={voice} className='project-image' alt='project image'/>
+            <img src={weather} className='project-image' alt='project image'/>
               <h2>Voice Journal App</h2>
               <p>A digital journal app for voice recording. The app allow users to create, listen to, and
                 delete voice notes.</p>
