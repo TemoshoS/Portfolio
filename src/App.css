@@ -3,7 +3,10 @@
   padding: 0;
 }
 
-
+body{
+  min-height: 100vh;
+  background-color: black;
+}
 
 nav {
   position: fixed;
@@ -192,6 +195,27 @@ nav li:first-child {
   box-shadow: 0 0 20px rgb(216, 182, 231);
 }
 
+.down-btn{
+
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: rgb(216, 182, 231);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  margin-right: 20px;
+
+}
+.down-btn:hover {
+  box-shadow: 0 0 5px rgb(216, 182, 231),
+    0 0 25px rgb(216, 182, 231), 0 0 50px rgb(216, 182, 231)
+}
 .btnMore {
   display: inline-block;
   padding: 12px 20px;
@@ -292,11 +316,11 @@ nav li:first-child {
 }
 
 
-#projects {
+#services {
   color: aliceblue;
   font-size: 20px;
   line-height: 1.4;
-  margin-bottom: 70px;
+  
 
 }
 
@@ -314,22 +338,24 @@ nav li:first-child {
   padding: 90px;
 }
 
-.projects-list {
+.services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
 
-.project-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 30px;
-
+.services-icons{
+  color: #6a129c;
+  font-size: 45px;
 }
 
-.projects-list div {
+.center-content {
+  text-align: center;
+  margin: 0 auto; 
+}
+
+.services-list div {
   background-color: transparent;
   padding: 40px;
   font-size: 13px;
@@ -342,14 +368,14 @@ nav li:first-child {
 
 
 
-.projects-list div h2 {
+.services-list div h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
 
 }
 
-.projects-list div a {
+.services-list div a {
   text-decoration: none;
   font-size: 12px;
   color: #fff;
@@ -381,12 +407,428 @@ nav li:first-child {
 
 }
 
-.projects-list div:hover {
+.services-list div:hover {
   transform: translateY(-10px);
 
 }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 500px;
+ 
+}
 
 
+
+
+.container1{
+  width: 400px;
+  height: 300px;
+  padding: 75px 90px;
+  
+}
+.container2{
+  width: 400px;
+  height: 200px;
+  padding: 75px 90px;
+  
+}
+.heading1{
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+  color: rgb(203, 196, 204);
+}
+
+.bar{
+  font-size: 23px;
+}
+
+.Technical-bars .bar{
+  margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child{
+  margin-top: 0;
+}
+
+.Technical-bars .bar:last-child{
+  margin-bottom: 0;
+}
+
+.Technical-bars .bar .info{
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span{
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+  color: rgb(203, 196, 204);
+}
+
+.Technical-bars .bar .progress-line{
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(235, 211, 211);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate{
+  100%{
+    transform: scaleX(1);
+  }
+}
+.Technical-bars .bar .progress-line span{
+  height: 100%;
+  background-color: #6a129c;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.progress-line.html span{
+  width: 84%;
+}
+.progress-line.css span{
+  width: 90%;
+}
+.progress-line.javascript span{
+  width: 73%;
+}
+.progress-line.react span{
+  width: 80%;
+}
+.progress-line.redux span{
+  width: 70%;
+}
+.progress-line.node span{
+  width: 69%;
+}
+.progress-line.java span{
+  width: 68%;
+}
+.progress-line.firebase span{
+  width: 88%;
+}
+.progress-line.sql span{
+  width: 90%;
+}
+.progress-line.git span{
+  width: 85%;
+}
+.progress-line span::after {
+  
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #3f6fa5;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px; 
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.progress-line.html span::after{
+  content: '84%';
+}
+.progress-line.css span::after{
+  content: '90%';
+}
+.progress-line.javascript span::after{
+  content: '73%';
+}
+.progress-line.redux span::after{
+  content: '70%';
+}
+.progress-line.node span::after{
+  content: '69%';
+}
+.progress-line.react span::after{
+  content: '80%';
+}
+.progress-line.java span::after{
+  content: '68%';
+}
+.progress-line.firebase span::after{
+  content: '88%';
+}
+.progress-line.sql span::after{
+  content: '90%';
+}
+.progress-line.git span::after{
+  content: '85%';
+}
+
+.progress-line span::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+
+.radial-bars{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+ 
+}
+.radial-bars .radial-bar{
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+
+.radial-bars .radial-bar svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 160px;
+
+}
+
+.radial-bars .radial-bar .progress-bar{
+  stroke-width: 10;
+  stop-color: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+  100%{
+    stroke-dashoffset: -1;
+  }
+}
+
+.path {
+  stroke-width: 10;
+  stroke: #6a129c;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+
+.radial-bar .percentage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+  color: rgb(203, 196, 204);
+}
+
+.radial-bar .text{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50px);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+  color: rgb(203, 196, 204);
+}
+
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('../public/smoke.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  align-items: center;
+}
+
+.contact .content{
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2{
+  font-size: 36px;
+  font-weight: 500;
+
+}
+.contact .content p{
+  
+  font-weight: 300;
+  
+}
+.container3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container3 .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+.container3 .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container3 .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+
+}
+.container3 .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container3 .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #6a129c;
+
+}
+.contactForm{
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+  color: black;
+}
+
+.contactForm h2{
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+
+}
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  resize: none;
+
+}
+
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox button{
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@keyframes animate-path1 {
+  100%{
+    stroke-dashoffset: 30;
+  }
+}
+
+@keyframes animate-path2 {
+  100%{
+    stroke-dashoffset: 175;
+  }
+}
+@keyframes animate-path3 {
+  100%{
+    stroke-dashoffset: 125;
+  }
+}
+@keyframes animate-path4 {
+  100%{
+    stroke-dashoffset: 75;
+  }
+}
 
 @keyframes slideRight {
   0% {
@@ -446,12 +888,52 @@ nav li:first-child {
     display: block;
 
   }
+  .about {
+    grid-template-columns: 1fr; 
+  }
+
+  .about-image {
+    margin-left: 0; 
+  }
+
+  .about-text {
+    margin-right: 0; 
+  }
+
+  .container1 {
+    width: 100%; 
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .container2 {
+    width: 100%; 
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact{
+    padding: 50px;
+
+  }
+  .container3{
+    flex-direction: column;
+  }
+  .container3 .contactInfo{
+    margin-bottom: 40px;
+  }
+  .container3 .contactInfo{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
 
   .sidebar {
     width: 100%;
+  }
+  .profile-image {
+    display: none;
   }
 
   .home {
