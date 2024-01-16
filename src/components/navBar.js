@@ -30,7 +30,7 @@ function NavBar() {
     <nav>
       <ul className={`sidebar ${sidebarVisible ? 'show' : ''}`}>
         <li onClick={hideSidebar}>
-          <a href='#'>
+          <a >
             <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white" />
             </svg>
