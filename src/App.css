@@ -439,7 +439,6 @@ nav li:first-child {
 
 .choose-icon {
   font-size: 36px;
-  color: #3498db;
   margin-bottom: 10px;
 }
 
@@ -451,8 +450,6 @@ nav li:first-child {
   margin-bottom: 500px;
 
 }
-
-
 
 
 .container1 {
@@ -471,11 +468,14 @@ nav li:first-child {
 
 .heading1 {
   text-align: center;
-  text-decoration: underline;
   text-underline-offset: 10px;
   text-decoration-thickness: 5px;
   margin-bottom: 50px;
-  color: rgb(203, 196, 204);
+  color: white;
+}
+.Technical-bars {
+  background-color: rgb(36, 10, 46);
+  padding: 30px;
 }
 
 .bar {
@@ -503,7 +503,7 @@ nav li:first-child {
   font-weight: 500;
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
-  color: rgb(203, 196, 204);
+  color: rgb(255, 255, 255);
 }
 
 .Technical-bars .bar .progress-line {
@@ -511,7 +511,7 @@ nav li:first-child {
   border-radius: 10px;
   width: 100%;
   height: 5px;
-  background-color: rgb(235, 211, 211);
+  background-color: rgb(255, 255, 255);
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   transform: scaleX(0);
   transform-origin: left;
@@ -525,7 +525,7 @@ nav li:first-child {
 
 .Technical-bars .bar .progress-line span {
   height: 100%;
-  background-color: #6a129c;
+  background-color: #a307fd;
   position: absolute;
   border-radius: 10px;
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -577,7 +577,7 @@ nav li:first-child {
 
   position: absolute;
   padding: 1px 8px;
-  background-color: #3f6fa5;
+  background-color: #000000;
   color: #fff;
   font-size: 12px;
   border-radius: 3px;
@@ -742,6 +742,52 @@ nav li:first-child {
   color: rgb(203, 196, 204);
 }
 
+/* projects */
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.product-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px; 
+  
+  margin: 10px;
+  aspect-ratio: 1;
+}
+
+.product-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  
+  object-fit: cover;
+}
+
+.product-details {
+  flex: 1;
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 14px;
+}
+/* contact */
 .contact {
   position: relative;
   min-height: 100vh;
@@ -1141,6 +1187,16 @@ nav li:first-child {
   .services-list {
     margin-left: auto;
     margin-right: auto;
+  }
+  .skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container1{
+    width: 300px;
+    margin-bottom: 600px;
   }
 
   .bar,

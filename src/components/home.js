@@ -75,9 +75,8 @@ function Home() {
             <h3>Hello, My Name is</h3>
             <h1>Temosho Shaku</h1>
             <h3>I'm a <span className='text'></span></h3>
-             <p> I'm a Software developer with extensive experience for over 2 years.
-          expertise is to create and website design, frontend design and...
-        </p> 
+            <p> I build and design websites from start to finish, handling both the front and back ends of things.
+            </p>
             <div className='home-sci'>
               <a href='https://github.com/TemoshoS' style={{ '--1': 1 }}><i className='bx bxl-github'></i></a>
               <a href='https://www.linkedin.com/in/temosho-shaku-a2598917b/' style={{ '--1': 2 }}><i className='bx bxl-linkedin-square'></i></a>
@@ -115,7 +114,7 @@ function Home() {
       </div>
 
       {/* services Section */}
-      <div id='services' className='services' style={{ backgroundColor: 'black' }}>
+      <div id='services' className='services' >
         <div className='container'>
           <h1 className='sub-title'>My <span>Services</span></h1>
           <div className='services-list'>
@@ -140,42 +139,42 @@ function Home() {
               <a href='#' className='read'>Learn more</a>
             </div>
 
-            
+
 
           </div>
-          
+
 
         </div>
-        
+
         <div className='container why-choose'>
-  <h3 className='sub-title'>Why <span>Choose</span> Us:</h3>
-  <div className='choose-list'>
-    <div className='choose-item'>
-      <i className='choose-icon bx bx-check'></i>
-      <h4>Design Excellence</h4>
-      <p>Our team of skilled designers is dedicated to delivering top-notch designs that not only look great but also enhance the overall user experience.</p>
-    </div>
+          <h3 className='sub-title'>Why <span>Choose</span> Us:</h3>
+          <div className='choose-list'>
+            <div className='choose-item'>
+              <i className='choose-icon bx bx-check'></i>
+              <h4>Design Excellence</h4>
+              <p>Our team of skilled designers is dedicated to delivering top-notch designs that not only look great but also enhance the overall user experience.</p>
+            </div>
 
-    <div className='choose-item'>
-      <i className='choose-icon bx bx-handshake'></i>
-      <h4>Collaborative Approach</h4>
-      <p>We believe in collaboration and work closely with our clients to understand their brand, goals, and user expectations, ensuring the design reflects the essence of the business.</p>
-    </div>
+            <div className='choose-item'>
+              <i className="choose-icon fa-solid fa-handshake-simple"></i>
+              <h4>Collaborative Approach</h4>
+              <p>We believe in collaboration and work closely with our clients to understand their brand, goals, and user expectations, ensuring the design reflects the essence of the business.</p>
+            </div>
 
-    <div className='choose-item'>
-      <i className='choose-icon bx bx-rocket'></i>
-      <h4>Innovation</h4>
-      <p>Stay ahead in the competitive market with innovative design solutions that set your digital products apart and leave a lasting impression on users.</p>
-    </div>
-  </div>
-</div>
-</div>
+            <div className='choose-item'>
+              <i className='choose-icon bx bx-rocket'></i>
+              <h4>Innovation</h4>
+              <p>Stay ahead in the competitive market with innovative design solutions that set your digital products apart and leave a lasting impression on users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Skills Section */}
       <div id='skills' className='skills'>
 
         <div className='container1'>
-          <h1 className='heading1'>Technical Skills</h1>
+          <h1 className='heading1'>TECHNICAL SKILLS</h1>
           <div className='Technical-bars'>
             <div className='bar'><i style={{ color: 'orange' }} class='bx bxl-html5'></i>
               <div className='info'>
@@ -283,7 +282,7 @@ function Home() {
 
 
         <div className='container2'>
-          <h1 className='heading1'>Professional Skilss</h1>
+          <h1 className='heading1'>PROFESSIONAL SKILLS</h1>
 
           <div className='radial-bars'>
 
@@ -332,18 +331,39 @@ function Home() {
         </div>
 
       </div>
-
+<h2>Latest projects</h2>
       {/* Projects Section */}
-      <div id='projects' className='projects'>
-        <h1>Projects</h1>
-        <div className='project-item'>
-          <h2>Project 1</h2>
-          <p>Description of Project 1.</p>
+      <div id='projects' className='projects' style={{ backgroundColor: 'white' }}>
+
+        
+        <div className="product-card">
+        <div className='product-image'>
+          <img src={voice} alt='Project' />
         </div>
-        <div className='project-item'>
-          <h2>Project 2</h2>
-          <p>Description of Project 2.</p>
+          <div className="product-details">
+            <div className="product-name">Voice Recording</div>
+            <div className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi vitae massa sodales vulputate.</div>
+          </div>
         </div>
+        <div className="product-card">
+        <div className='product-image'>
+          <img src={country} alt='Project' />
+        </div>
+          <div className="product-details">
+            <div className="product-name">Voice Recording</div>
+            <div className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi vitae massa sodales vulputate.</div>
+          </div>
+        </div>
+        <div className="product-card">
+        <div className='product-image'>
+          <img src={weather} alt='Project' />
+        </div>
+          <div className="product-details">
+            <div className="product-name">Voice Recording</div>
+            <div className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi vitae massa sodales vulputate.</div>
+          </div>
+        </div>
+
       </div>
       {/* Contact Section */}
       <div className='contact' id='contact'>
