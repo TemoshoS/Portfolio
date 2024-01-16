@@ -319,7 +319,7 @@ nav li:first-child {
   line-height: 1.4;
   margin-bottom: 4rem;
 }
-
+/* services */
 
 #services {
   color: aliceblue;
@@ -415,7 +415,35 @@ nav li:first-child {
   transform: translateY(-10px);
 
 }
+.why-choose {
+  padding: 40px 0;
+  text-align: center;
+}
 
+.choose-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.choose-item {
+  flex: 1;
+  max-width: 300px;
+  padding: 20px;
+  margin: 0 10px;
+  background-color: #2b0528;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px purple;
+  margin-bottom: 20px; 
+}
+
+.choose-icon {
+  font-size: 36px;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+/* skills */
 .skills {
   display: flex;
   flex-wrap: wrap;

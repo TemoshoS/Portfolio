@@ -75,9 +75,9 @@ function Home() {
             <h3>Hello, My Name is</h3>
             <h1>Temosho Shaku</h1>
             <h3>I'm a <span className='text'></span></h3>
-            {/* <p> I'm a Software developer with extensive experience for over 2 years.
+             <p> I'm a Software developer with extensive experience for over 2 years.
           expertise is to create and website design, frontend design and...
-        </p> */}
+        </p> 
             <div className='home-sci'>
               <a href='https://github.com/TemoshoS' style={{ '--1': 1 }}><i className='bx bxl-github'></i></a>
               <a href='https://www.linkedin.com/in/temosho-shaku-a2598917b/' style={{ '--1': 2 }}><i className='bx bxl-linkedin-square'></i></a>
@@ -122,36 +122,54 @@ function Home() {
             <div className="center-content">
               <i className='services-icons bx bx-code-alt'></i>
               <h2>Web Development</h2>
-              <p>A digital journal app for voice recording. The app allow users to create, listen to, and
-                delete voice notes.</p>
+              <p>Get a website that truly represents your brand and goals. Our skilled developers are committed to making special, easy-to-use websites that make a lasting impact. Whether you're starting fresh or revamping, we create unique and responsive sites that match your style.</p>
               <a href='#' className='read'>Learn more</a>
             </div>
 
             <div class="center-content">
               <i className='services-icons bx bx-mobile'></i>
               <h2>Mobile Development</h2>
-              <p>A digital journal app for voice recording. The app allow users to create, listen to, and
-                delete voice notes.</p>
+              <p>Whether you're targeting Apple users, Android users, or both, we design and develop apps that run seamlessly on both platforms. Reach a wider audience with apps optimized for different devices.</p>
               <a href='#' className='read'>Learn more</a>
             </div>
 
             <div class="center-content">
               <i className='services-icons bx bxl-apple'></i>
               <h2>UI/UX Design</h2>
-              <p>A digital journal app for voice recording. The app allow users to create, listen to, and
-                delete voice notes.</p>
+              <p>Make your digital space both beautiful and easy to use with our UI/UX design services. We focus on creating designs that not only look good but also ensure a smooth and enjoyable experience for your users. Let's bring your vision to life with simplicity and style.</p>
               <a href='#' className='read'>Learn more</a>
             </div>
 
-
-
-
+            
 
           </div>
+          
 
         </div>
+        
+        <div className='container why-choose'>
+  <h3 className='sub-title'>Why <span>Choose</span> Us:</h3>
+  <div className='choose-list'>
+    <div className='choose-item'>
+      <i className='choose-icon bx bx-check'></i>
+      <h4>Design Excellence</h4>
+      <p>Our team of skilled designers is dedicated to delivering top-notch designs that not only look great but also enhance the overall user experience.</p>
+    </div>
 
-      </div>
+    <div className='choose-item'>
+      <i className='choose-icon bx bx-handshake'></i>
+      <h4>Collaborative Approach</h4>
+      <p>We believe in collaboration and work closely with our clients to understand their brand, goals, and user expectations, ensuring the design reflects the essence of the business.</p>
+    </div>
+
+    <div className='choose-item'>
+      <i className='choose-icon bx bx-rocket'></i>
+      <h4>Innovation</h4>
+      <p>Stay ahead in the competitive market with innovative design solutions that set your digital products apart and leave a lasting impression on users.</p>
+    </div>
+  </div>
+</div>
+</div>
 
       {/* Skills Section */}
       <div id='skills' className='skills'>
