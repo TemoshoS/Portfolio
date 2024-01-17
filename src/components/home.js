@@ -7,6 +7,7 @@ import profile from '../profile.jpg';
 import voice from '../images/voice.jpg';
 import country from '../images/country.jpg';
 import weather from '../images/weather.jpg';
+import portfolio from '../videos/portfolio.mp4'
 import '@fortawesome/fontawesome-free/css/all.css';
 
 
@@ -331,37 +332,58 @@ function Home() {
         </div>
 
       </div>
-<h2>Latest projects</h2>
-      {/* Projects Section */}
-      <div id='projects' className='projects' style={{ backgroundColor: 'white' }}>
 
-        
-        <div className="product-card">
-        <div className='product-image'>
-          <img src={voice} alt='Project' />
-        </div>
-          <div className="product-details">
-            <div className="product-name">Voice Recording</div>
-            <div className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi vitae massa sodales vulputate.</div>
+      {/* Projects Section */}
+      <div id='projects' className='main projects' >
+
+      <div className='container'>
+          <h1 className='sub-title'>Latest Projects</h1>
+          <div className='project-list'>
+            <div className="center-content">
+            <video controls>
+          <source src={portfolio} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+              <h2>Hotel website</h2>
+              <p>Get a website that truly represents your brand and goals. Our skilled developers are committed to making special, easy-to-use websites that make a lasting impact. Whether you're starting fresh or revamping, we create unique and responsive sites that match your style.</p>
+              <a href='#' className='read'>View more</a>
+            </div>
+
+            <div class="center-content">
+            <video controls>
+          <source src={portfolio}  type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+              <h2>Country website</h2>
+              <p>Whether you're targeting Apple users, Android users, or both, we design and develop apps that run seamlessly on both platforms. Reach a wider audience with apps optimized for different devices.</p>
+              <a href='#' className='read'>View more</a>
+            </div>
+
+            <div class="center-content">
+            <video controls>
+          <source src={portfolio}  type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+              <h2>Weather website</h2>
+              <p>Make your digital space both beautiful and easy to use with our UI/UX design services. We focus on creating designs that not only look good but also ensure a smooth and enjoyable experience for your users. Let's bring your vision to life with simplicity and style.</p>
+              <a href='#' className='read'>View more</a>
+            </div>
+
+            <div class="center-content">
+            <video controls>
+          <source src={portfolio}  type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+              <h2>Restaurant app</h2>
+              <p>Make your digital space both beautiful and easy to use with our UI/UX design services. We focus on creating designs that not only look good but also ensure a smooth and enjoyable experience for your users. Let's bring your vision to life with simplicity and style.</p>
+              <a href='#' className='read'>View more</a>
+            </div>
+
+
+
           </div>
-        </div>
-        <div className="product-card">
-        <div className='product-image'>
-          <img src={country} alt='Project' />
-        </div>
-          <div className="product-details">
-            <div className="product-name">Voice Recording</div>
-            <div className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi vitae massa sodales vulputate.</div>
-          </div>
-        </div>
-        <div className="product-card">
-        <div className='product-image'>
-          <img src={weather} alt='Project' />
-        </div>
-          <div className="product-details">
-            <div className="product-name">Voice Recording</div>
-            <div className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nisi vitae massa sodales vulputate.</div>
-          </div>
+
+
         </div>
 
       </div>

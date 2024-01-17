@@ -743,49 +743,35 @@ nav li:first-child {
 }
 
 /* projects */
-.projects{
+.projects {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
+  flex-direction: column;
+  margin-top: 50px;
 }
-.product-card {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px; 
-  
-  margin: 10px;
-  aspect-ratio: 1;
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
 }
-
-.product-image {
-  flex: 1;
-  overflow: hidden;
+.project-list div {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-right: 10px;
+  border-radius: 10px;
+  transition: background 0.5s transform 0.5s;
+  box-shadow: 0px 0px 10px #dacfe0, 1px 1px 20px #cecad1
 }
-
-.product-image img {
-  width: 100%;
-  
-  object-fit: cover;
-}
-
-.product-details {
-  flex: 1;
-  padding: 15px;
-}
-
-.product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.product-description {
-  font-size: 14px;
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 /* contact */
 .contact {
