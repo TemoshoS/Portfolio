@@ -296,13 +296,13 @@ function Home() {
                     <span>MLAB (CodeTribe Academy)</span>
                     <p>Position: Web and Mobile React Developer - trainee</p>
                     <p>Duration: June 2023 - December 2023</p>
-                    <p>Description: As a trainee Web and Mobile React Developer at MLAB (CodeTribe Academy), I gained hands-on experience in React.js, React Native, and web/mobile development. I worked on various projects, enhancing my skills and contributing to real-world applications.</p>
+                    <p className='desc'>Description: As a trainee Web and Mobile React Developer at MLAB (CodeTribe Academy), I gained hands-on experience in React.js, React Native, and web/mobile development. I worked on various projects, enhancing my skills and contributing to real-world applications.</p>
                   </li>
                   <li>
                     <span>Moepi Publishing</span>
                     <p>Position: Java Developer - intern</p>
                     <p>Duration: July 2022 - June 2023</p>
-                    <p>Description: As a Java Developer intern at Moepi Publishing, I was involved in designing user interfaces using Java Swing and implementing functionality with Java. I actively contributed to coding tasks and utilized MySQL for database management.</p>
+                    <p className='desc'>Description: As a Java Developer intern at Moepi Publishing, I was involved in designing user interfaces using Java Swing and implementing functionality with Java. I actively contributed to coding tasks and utilized MySQL for database management.</p>
                   </li>
 
 
@@ -322,13 +322,13 @@ function Home() {
                 <ul>
                   <li>
                     <span>Tshwane University of Technology</span>
-                    <p className='degree'>National Diploma: Information Technology Software Development </p>
+                    <p className='degree desc'>National Diploma: Information Technology Software Development </p>
                     <p>2023</p>
 
                   </li>
                   <li>
                     <span>Mokhulwane Secondary School</span>
-                    <p className='degree'>Grade 12</p>
+                    <p className='degree desc'>Grade 12</p>
                     <p>2014</p>
 
                   </li>

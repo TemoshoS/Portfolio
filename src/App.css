@@ -281,12 +281,12 @@ nav li:first-child {
 }
 
 .about-col-1 img {
-  max-width: 50%;
+  max-width: 80%;
   height: auto;
   border-radius: 8px;
 }
 .about-col-2 {
-  max-width: 600px;
+  max-width: 800px;
 }
 .sub-title1{
   font-size: 60px;
@@ -294,6 +294,11 @@ nav li:first-child {
   color: white;
   opacity: 0;
   animation: slideRight 1s ease forwards;
+  animation-delay: .8s;
+}
+.desc{
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
   animation-delay: .8s;
 }
 .sub-title1 span{
@@ -338,6 +343,7 @@ nav li:first-child {
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: .8s;
+    font-weight: 600;
 }
 .tab-contents{
   display: none;
@@ -523,12 +529,14 @@ nav li:first-child {
   color: white;
 }
 .Technical-bars {
-  background-color: rgb(36, 10, 46);
-  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
 }
 
 .bar {
-  font-size: 23px;
+  width: calc(50% - 20px); 
+  margin: 0 10px 20px; 
 }
 
 .Technical-bars .bar {
@@ -574,7 +582,7 @@ nav li:first-child {
 
 .Technical-bars .bar .progress-line span {
   height: 100%;
-  background-color: #a307fd;
+  background-color: #6a129c;
   position: absolute;
   border-radius: 10px;
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -1057,17 +1065,13 @@ video {
 
   }
 
-  .about {
-    grid-template-columns: 1fr;
+  .container4 {
+    padding: 20px; 
+  }
+  .about-col-1{
+    display: none;
   }
 
-  .about-image {
-    margin-left: 0;
-  }
-
-  .about-text {
-    margin-right: 0;
-  }
 
   .container1 {
     max-width: 100%;
@@ -1080,7 +1084,9 @@ video {
     padding: 20px;
   }
 
-  .bar,
+  .bar {
+    width: calc(50% - 20px); 
+  }
   .radial-bar {
     width: 100%;
   }
