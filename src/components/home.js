@@ -505,7 +505,7 @@ function Home() {
       <div className='contact' id='contact'>
         <div className='content'>
           <h2 >Contact Us</h2>
-          <p>Let's talk, i will get back to you</p>
+          
         </div>
         <div className='container3'>
           <div className='contactInfo'>
