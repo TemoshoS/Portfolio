@@ -420,6 +420,11 @@ nav li:first-child {
   margin: 0 auto;
 }
 
+.center-content h2{
+ margin-bottom: 20px;
+ font-size: 28px;
+}
+
 .services-list div {
   background-color: transparent;
   padding: 40px;
@@ -451,9 +456,10 @@ nav li:first-child {
 
 .read {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 8px 16px;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 14px;
+  margin-top: 20px;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -503,6 +509,8 @@ nav li:first-child {
 }
 
 /* skills */
+
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -774,6 +782,10 @@ nav li:first-child {
 .path-4 {
   animation: animate-path4 1s 1s linear forwards;
 }
+.path-5 {
+  animation: animate-path5 1s 1s linear forwards;
+}
+
 
 
 .radial-bar .percentage {
@@ -803,13 +815,15 @@ nav li:first-child {
 }
 
 /* projects */
-.projects {
+#projects {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 50px;
+  min-height: 100vh; 
+}
+
+.container {
+  text-align: center;
 }
 .project-list {
   display: grid;
@@ -826,6 +840,26 @@ nav li:first-child {
   border-radius: 10px;
   transition: background 0.5s transform 0.5s;
   box-shadow: 0px 0px 10px #dacfe0, 1px 1px 20px #cecad1
+}
+.project-list div:nth-child(n+4) {
+  display: none;
+}
+
+#view-more-btn {
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #6a129c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#view-more-btn:hover {
+  box-shadow: 0px 0px 10px #6a129c, 1px 1px 20px #6a129c
 }
 video {
   max-width: 100%;
@@ -990,7 +1024,7 @@ video {
 
 @keyframes animate-path2 {
   100% {
-    stroke-dashoffset: 175;
+    stroke-dashoffset: 155;
   }
 }
 
@@ -1003,6 +1037,12 @@ video {
 @keyframes animate-path4 {
   100% {
     stroke-dashoffset: 75;
+  }
+}
+
+@keyframes animate-path5 {
+  100% {
+    stroke-dashoffset: 85;
   }
 }
 
@@ -1077,7 +1117,9 @@ video {
   }
 
 
-
+  #view-more-btn {
+    font-size: 14px;
+  }
  
 
   .container2 {

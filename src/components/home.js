@@ -79,17 +79,32 @@ function Home() {
     document.body.removeChild(link);
   };
 
+  function toggleProjects() {
+    var hiddenProjects = document.querySelectorAll('.project-list div:nth-child(n+4)');
+
+    hiddenProjects.forEach(function (project) {
+      project.style.display = project.style.display === 'block' ? 'none' : 'block';
+    });
+
+    var btnText = document.getElementById('view-more-btn').innerHTML;
+    document.getElementById('view-more-btn').innerHTML =
+      btnText === 'View more' ? 'Hide' : 'View more';
+  }
+
+
+
+
   return (
     <div ><NavBar />
 
       <div id='home' className='home'>
         <div className='home-content'>
           <div className='content-text'>
-            <h3>Hello, My Name is</h3>
+            <h3>Hi, My Name is</h3>
             <h1>Temosho Shaku</h1>
             <h3>I'm a <span className='text'></span></h3>
-            <p> I build and design websites from start to finish, handling both the front and back ends of things.
-            </p>
+            {/* <p> I build and design websites from start to finish, handling both the front and back ends of things.
+            </p> */}
             <div className='home-sci'>
               <a href='https://github.com/TemoshoS' style={{ '--1': 1 }}><i className='bx bxl-github'></i></a>
               <a href='https://www.linkedin.com/in/temosho-shaku-a2598917b/' style={{ '--1': 2 }}><i className='bx bxl-linkedin-square'></i></a>
@@ -116,9 +131,10 @@ function Home() {
             </div>
             <div className='about-col-2'>
               <h1 className='sub-title1'>About <span>Me</span></h1>
-              <p>I'm Temosho Shaku, a skilled Web and Mobile Developer in Tshwane and Johannesburg, South Africa.
-                I work with different technologies like React.js, React Native, Angular, Java, SQL, and Node.js.
-                I've turned creative ideas into good software solutions with my National Diploma in Information Technology.</p>
+              <p>I'm a developer from Tembisa. Skilled in both front-end and back-end technologies,
+                I turn creative ideas into software solutions. With a National Diploma in Information Technology,
+                I value effective time management and am committed to continuous learning, staying updated on the latest trends
+                in web and mobile development.</p>
 
               <div className='tab-titles'>
                 <p className={`tab-links ${activeTab === 'skills' ? 'active-link' : ''}`} onClick={() => openTab('skills')}>Skills</p>
@@ -249,7 +265,7 @@ function Home() {
                           <circle className='path path-1' cx='100' cy='100' r='80'></circle>
                         </svg>
                         <div className='percentage'>90%</div>
-                        <div className='text'>Creativity</div>
+                        <div className='text'>Time Management</div>
 
                       </div>
                       <div className='radial-bar'>
@@ -258,7 +274,7 @@ function Home() {
                           <circle className='progress-bar' cx='100' cy='100' r='80'></circle>
                           <circle className='path path-2' cx='100' cy='100' r='80'></circle>
                         </svg>
-                        <div className='percentage'>65%</div>
+                        <div className='percentage'>69%</div>
                         <div className='text'>Communication</div>
 
                       </div>
@@ -280,6 +296,16 @@ function Home() {
                         </svg>
                         <div className='percentage'>85%</div>
                         <div className='text'>Teamwork</div>
+
+                      </div>
+                      <div className='radial-bar'>
+
+                        <svg x='0px' y='0px' viewBox='0 0 200 200'>
+                          <circle className='progress-bar' cx='100' cy='100' r='80'></circle>
+                          <circle className='path path-5' cx='100' cy='100' r='80'></circle>
+                        </svg>
+                        <div className='percentage'>80%</div>
+                        <div className='text'>Adaptability</div>
 
                       </div>
                     </div>
@@ -398,21 +424,21 @@ function Home() {
               <i className='services-icons bx bx-code-alt'></i>
               <h2>Web Development</h2>
               <p>Get a website that truly represents your brand and goals. Our skilled developers are committed to making special, easy-to-use websites that make a lasting impact. Whether you're starting fresh or revamping, we create unique and responsive sites that match your style.</p>
-              <a href='#' className='read'>Learn more</a>
+
             </div>
 
             <div class="center-content">
               <i className='services-icons bx bx-mobile'></i>
               <h2>Mobile Development</h2>
               <p>Whether you're targeting Apple users, Android users, or both, we design and develop apps that run seamlessly on both platforms. Reach a wider audience with apps optimized for different devices.</p>
-              <a href='#' className='read'>Learn more</a>
+
             </div>
 
             <div class="center-content">
               <i className='services-icons bx bxl-apple'></i>
               <h2>UI/UX Design</h2>
               <p>Make your digital space both beautiful and easy to use with our UI/UX design services. We focus on creating designs that not only look good but also ensure a smooth and enjoyable experience for your users. Let's bring your vision to life with simplicity and style.</p>
-              <a href='#' className='read'>Learn more</a>
+
             </div>
 
 
@@ -448,55 +474,103 @@ function Home() {
 
 
       {/* Projects Section */}
-      <div id='projects' className='main projects' >
+      <div id='projects' className='projects' >
 
         <div className='container'>
           <h1 className='sub-title'>Latest Projects</h1>
           <div className='project-list'>
             <div className="center-content">
-              <video controls>
+              {/* <video controls>
                 <source src={portfolio} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
+              {/* <div>
+                <img src={voice} alt='project image'/>
+              </div> */}
               <h2>Hotel website</h2>
-              <p>Get a website that truly represents your brand and goals. Our skilled developers are committed to making special, easy-to-use websites that make a lasting impact. Whether you're starting fresh or revamping, we create unique and responsive sites that match your style.</p>
-              <a href='#' className='read'>View more</a>
+              <p>
+                I built a lively hotel website using React.js for the look and feel, and Firebase for the behind-the-scenes operations. The React.js frontend delivers an engaging and attractive user interface, while Firebase takes care of storing data and managing user authentication, ensuring a reliable backend.
+                <br></br>
+                My work allows visitors to effortlessly browse the hotel's offerings, move around different sections, and book rooms seamlessly. Thanks to Firebase's real-time updates, the website responds promptly, providing a user-friendly experience for potential guests. I focused on blending React.js efficiency with Firebase scalability, resulting in a well-rounded hotel website that's both stylish and functional.</p>
+              <a href='https://github.com/TemoshoS/Hotel-App' className='read'>Learn more</a>
+
             </div>
 
             <div class="center-content">
-              <video controls>
+              {/* <video controls>
                 <source src={portfolio} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
               <h2>Country website</h2>
-              <p>Whether you're targeting Apple users, Android users, or both, we design and develop apps that run seamlessly on both platforms. Reach a wider audience with apps optimized for different devices.</p>
-              <a href='#' className='read'>View more</a>
+              <p>I've developed a Country website using React.js and APIs. This platform provides information about various countries, offering a dynamic and responsive user interface. By incorporating React.js, I've ensured an engaging and interactive design, allowing users to explore details about different countries effortlessly.
+                <br></br>
+                To enhance the website's functionality, I've integrated APIs, enabling real-time data updates and expanding the range of information available.</p>
+              <a href='https://github.com/TemoshoS/Country-app' className='read'>Learn more</a>
             </div>
 
+
             <div class="center-content">
-              <video controls>
+              {/* <video controls>
                 <source src={portfolio} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
+              <h2>e-Commerce website</h2>
+              <p>I made an e-Commerce website using React.js and Firebase. It's an online shopping platform with a user-friendly design thanks to React.js. The website runs smoothly with Firebase in the background, handling things like storing data and making sure user interactions are updated in real-time.</p>
+              <a href='https://github.com/TemoshoS/ecomm' className='read'>Learn more</a>
+            </div>
+            <div class="center-content">
+              {/* <video controls>
+                <source src={portfolio} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
               <h2>Weather website</h2>
-              <p>Make your digital space both beautiful and easy to use with our UI/UX design services. We focus on creating designs that not only look good but also ensure a smooth and enjoyable experience for your users. Let's bring your vision to life with simplicity and style.</p>
-              <a href='#' className='read'>View more</a>
+              <p>
+                I've created a Weather website using React.js and APIs. This platform provides straightforward and real-time weather information. With React.js, the website offers a user-friendly and responsive design, making it easy for users to check the weather conditions.</p>
+              <a href='https://github.com/TemoshoS/Weather-app' className='read'>Learn more</a>
             </div>
 
             <div class="center-content">
-              <video controls>
+              {/* <video controls>
                 <source src={portfolio} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
               <h2>Restaurant app</h2>
-              <p>Make your digital space both beautiful and easy to use with our UI/UX design services. We focus on creating designs that not only look good but also ensure a smooth and enjoyable experience for your users. Let's bring your vision to life with simplicity and style.</p>
-              <a href='#' className='read'>View more</a>
+              <p>I made a Restaurant app using React Native and Firebase. It's a mobile app that lets users easily explore and interact with restaurant offerings. With React Native, the app works smoothly on different mobile devices.
+
+                Firebase is used in the background to store data and ensure seamless interactions.</p>
+              <a href='https://github.com/TemoshoS/restaurant-app' className='read'>Learn more</a>
             </div>
+
+            <div class="center-content">
+              {/* <video controls>
+                <source src={portfolio} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
+              <h2>Voice Journal Recording app</h2>
+              <p>
+                I've developed a Voice Journal Recording app using React Native and Async Storage. This mobile application allows users to record and store voice entries, providing a convenient way to keep personal audio journals.
+
+                Built with React Native, the app ensures a smooth and responsive user experience on various mobile devices. The use of Async Storage facilitates secure and efficient local storage of voice recordings, enhancing the reliability of the app.</p>
+              <a href='https://github.com/TemoshoS/voice-journal' className='read'>Learn more</a>
+            </div>
+
+            <div class="center-content">
+              {/* <video controls>
+                <source src={portfolio} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
+              <h2>News app</h2>
+              <p>I've created a News app using React Native and APIs. This mobile application delivers news content in a convenient and user-friendly format. With React Native, the app ensures a smooth and responsive experience on various mobile devices.
+
+                By integrating APIs, the News app stays up-to-date with the latest information, providing users with real-time news articles.</p>
+              <a href='https://github.com/TemoshoS/news' className='read'>Learn more</a>
+            </div>
+
 
 
 
           </div>
-
+          <button onClick={toggleProjects} id="view-more-btn">View more</button>
 
         </div>
 
@@ -505,7 +579,7 @@ function Home() {
       <div className='contact' id='contact'>
         <div className='content'>
           <h2 >Contact Us</h2>
-          
+
         </div>
         <div className='container3'>
           <div className='contactInfo'>
@@ -513,7 +587,7 @@ function Home() {
               <div className='icon'><i class="fa-solid fa-location-dot"></i></div>
               <div className='text'>
                 <h3>Adrress</h3>
-                <p>50 ganchabeleng,<br></br>ganchabeleng<br></br>0741</p>
+                <p>Winnie Mandela,<br></br>Tembisa<br></br>1632</p>
 
               </div>
             </div>
